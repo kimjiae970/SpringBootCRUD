@@ -59,8 +59,8 @@ public class BoardService {
     }
 
 
-    public BoardListResponseDto delete(Long id){
+    public BoardResponseDto delete(Long id){
         boardRepository.deleteById(id);
-        return new BoardListResponseDto();
+        return new BoardResponseDto();
     }
 }

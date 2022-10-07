@@ -38,7 +38,7 @@ public class BoardController {
     }
 
     @DeleteMapping("/api/board/{id}")
-    public BoardListResponseDto deletelist(@PathVariable Long id){
+    public BoardResponseDto deletelist(@PathVariable Long id){
         return boardService.delete(id);
     }
 }
