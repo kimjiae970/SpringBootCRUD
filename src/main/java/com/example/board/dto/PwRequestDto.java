@@ -6,4 +6,6 @@ import lombok.Getter;
 public class PwRequestDto {
 
     private String password;
+
+
 }
