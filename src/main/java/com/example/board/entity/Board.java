@@ -1,12 +1,15 @@
 package com.example.board.entity;
 
 import com.example.board.dto.BoardRequestDto;
+import com.example.board.util.Timestamped;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@Data
 @NoArgsConstructor
 @Getter
 @Entity
@@ -17,7 +20,7 @@ public class Board extends Timestamped {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(length = 10, nullable = false)
+    @Column(length = 50, nullable = false)
     private String title;
 
     @Column(length = 200, nullable = false)
@@ -53,5 +56,6 @@ public class Board extends Timestamped {
         this.password = requestDto.getPassword();
 
     }
+
 
 }
